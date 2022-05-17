@@ -143,6 +143,7 @@ function App() {
         <button className="btn" onClick={() => train(NOT_TOUCH_LABEL)}>1</button>
         <button className="btn" onClick={() => train(TOUCHED_LABEL)}>2</button>
         <button className="btn" onClick={() => run()}>Test</button>
+        <button className="btn" onClick={() => run()}>Test</button>
       </div>
 
     </div>
