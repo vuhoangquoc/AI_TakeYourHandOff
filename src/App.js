@@ -7,6 +7,7 @@ import './App.css';
 import soundURL from './assets/btr.mp3';
 import { initNotifications, notify } from '@mycv/f8-notification';
 
+
 var sound = new Howl({
   src: [soundURL]
 });
@@ -24,6 +25,8 @@ function App() {
   const mobilenetModule = useRef();
   const [touched, setTouched] = useState(false);
 
+
+  // sử dụng để setup camera (1)
   const init = async () => {
     console.log('init...');
     await setupCamera();
@@ -39,6 +42,7 @@ function App() {
     initNotifications({ cooldown: 3000 });
   }
 
+  // sử dụng để xin quyền truy cập vào camera (2)
   const setupCamera = () => {
     return new Promise((resolve, reject) => {
       navigator.getUserMedia = navigator.getUserMedia || 
@@ -138,8 +142,9 @@ function App() {
       <div className='control'>
         <button className="btn" onClick={() => train(NOT_TOUCH_LABEL)}>1</button>
         <button className="btn" onClick={() => train(TOUCHED_LABEL)}>2</button>
-        <button className="btn" onClick={() => run()}>Khởi động</button>
+        <button className="btn" onClick={() => run()}>Test</button>
       </div>
+
     </div>
   );
 }
